@@ -1,0 +1,3 @@
+- Can I make the verification auto count the word chosen letter length and ask for this? This would be for a more difficult level.
+- How to store in an array all the guessed words via a session?
+- 
