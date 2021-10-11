@@ -14,7 +14,9 @@
             <body>
                 <h1 align="center">Marisabel's Lingo Project</h1>
                 <hr>
-                <h3 align="center" color="red">Word to guess: ${words.word}</h3>
+                              <div>Credits : ${game.credits} | Attempt: ${game.attempts} / ${game.tries}</div>
+
+  <h3 align="center" color="red">Word to guess: ${words.word}</h3>
                 <form:form action="process-guess" method="get" modelAttribute="words">
                     <div align="center">
 

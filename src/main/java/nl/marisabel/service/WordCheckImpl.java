@@ -1,21 +1,21 @@
 package nl.marisabel.service;
 
+import nl.marisabel.api.GameDTO;
 import nl.marisabel.api.WordsDTO;
 import nl.marisabel.util.WordGenerator;
 import org.springframework.stereotype.Service;
-
+//TODO make a test for tries and attempts
 @Service
 public class WordCheckImpl implements WordCheckService {
-
+    static GameDTO game = new GameDTO();
     static WordGenerator newWord = new WordGenerator();
     static WordsDTO wordsDTO = new WordsDTO();
     static int attempt = 0 ;
-    static int mode = 2;
-    static int life=3;
-
+    static int mode = game.getTries();
+    static int life = game.getCredits();
     @Override
     public String checkWord(String word, String guess) {
-        while (life >= 1) {
+        while (game.getTries() >= 1) {
 
             // as long as attempts are not equal to mode (tries), keep guessing
             for (attempt = 1; attempt <= mode ; attempt++) {
@@ -25,7 +25,7 @@ public class WordCheckImpl implements WordCheckService {
                 if (guess.equals(word)) {
 
                 } else {
-                    mode--;
+                    game.setTries(mode--);
                     wordsDTO.setResult(resultWord(word, guess));
                     return ("Try again: "+ resultWord(word, guess));
                 }
@@ -36,7 +36,7 @@ public class WordCheckImpl implements WordCheckService {
                 return "Correct! it was " + word;
 
             } else {
-                life--;
+                game.setCredits(life--);
                 return "Sorry, the word was " + word;
             }
         }

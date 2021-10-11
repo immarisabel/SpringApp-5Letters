@@ -5,7 +5,6 @@ import nl.marisabel.util.WordGenerator;
 
 public class WordsDTO {
 
-
     private String word = WordGenerator.getWord();
     private String guess;
     private String result;

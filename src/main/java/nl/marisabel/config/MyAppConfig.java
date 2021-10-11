@@ -1,5 +1,6 @@
 package nl.marisabel.config;
 
+import nl.marisabel.api.GameDTO;
 import nl.marisabel.service.WordCheckImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -28,5 +29,6 @@ public class MyAppConfig {
         WordCheckImpl wordCheck = new WordCheckImpl();
         return wordCheck;
     }
+
 
 }
