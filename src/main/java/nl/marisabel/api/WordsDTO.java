@@ -3,6 +3,8 @@ package nl.marisabel.api;
 
 import nl.marisabel.util.WordGenerator;
 
+import javax.validation.Valid;
+
 public class WordsDTO {
 
     private String word = WordGenerator.getWord();

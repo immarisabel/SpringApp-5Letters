@@ -37,6 +37,8 @@ public class GameControllerTest {
         assertNotNull(wordsDTO.getResult());
     }
 
+    //TODO test attempts and credit count
+
 
 
 
