@@ -1,6 +1,6 @@
-package nl.marisabel.validator;
+package nl.marisabel.game;
 
-import nl.marisabel.api.WordsDTO;
+import nl.marisabel.game.api.WordsDTO;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

@@ -1,7 +1,6 @@
-package nl.marisabel.service;
+package nl.marisabel.game.service;
 
 public interface WordCheckService {
-      String checkWord(String word, String guess);
       String resultWord(String word, String guess);
 
 }

@@ -1,5 +1,6 @@
-package nl.marisabel.config;
+package nl.marisabel.game;
 
+import nl.marisabel.game.config.MyAppConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class MyApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {

@@ -1,4 +1,4 @@
-package nl.marisabel.api;
+package nl.marisabel.game.api;
 
 public class ScoreDTO {
 

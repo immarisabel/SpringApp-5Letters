@@ -1,5 +1,5 @@
-import nl.marisabel.api.WordsDTO;
-import nl.marisabel.service.WordCheckImpl;
+import nl.marisabel.game.api.WordsDTO;
+import nl.marisabel.game.service.WordCheckImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +31,6 @@ public class GameControllerTest {
     public void testResultsNullException() throws ClassNotFoundException {
         wordsDTO.setGuess("appls");
         wordsDTO.setWord("apple");
-        System.out.println(wordCheck.checkWord(wordsDTO.getWord(), wordsDTO.getGuess()));
         System.out.println(wordCheck.resultWord(wordsDTO.getWord(), wordsDTO.getGuess()));
         wordsDTO.setResult(wordCheck.resultWord(wordsDTO.getWord(), wordsDTO.getGuess()));
         assertNotNull(wordsDTO.getResult());

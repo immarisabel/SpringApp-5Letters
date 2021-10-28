@@ -1,7 +1,9 @@
-package nl.marisabel.config;
+package nl.marisabel.game.config;
 
-import nl.marisabel.service.WordCheckImpl;
-import nl.marisabel.validator.WordValidator;
+
+import nl.marisabel.game.WordValidator;
+import nl.marisabel.game.service.WordCheckImpl;
+import nl.marisabel.game.service.WordGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "nl.marisabel.controller")
+@ComponentScan(basePackages = "nl.marisabel.game.controller")
 public class MyAppConfig {
 
     // set up view resolver
@@ -34,6 +36,12 @@ public class MyAppConfig {
     public WordValidator wordValidator(){
         WordValidator wordValidator = new WordValidator();
         return wordValidator;
+    }
+
+    @Bean
+    public WordGenerator wordGenerator(){
+        WordGenerator wordGenerator = new WordGenerator();
+        return wordGenerator;
     }
 
 

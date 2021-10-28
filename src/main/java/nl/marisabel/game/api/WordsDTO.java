@@ -1,13 +1,12 @@
-package nl.marisabel.api;
+package nl.marisabel.game.api;
 
-
-import nl.marisabel.util.WordGenerator;
-
-import javax.validation.Valid;
+import java.util.logging.Logger;
 
 public class WordsDTO {
 
-    private String word = WordGenerator.getWord();
+    Logger LOGGER = Logger.getLogger(WordsDTO.class.getName());
+
+    private String word;
     private String guess;
     private String result;
 
@@ -17,6 +16,7 @@ public class WordsDTO {
 
     public void setWord(String word) {
         this.word = word;
+        LOGGER.info("New word is set to be guessed.");
     }
 
     public String getGuess() {
